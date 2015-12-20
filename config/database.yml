@@ -22,10 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
-  # adapter: postgresql
-  # encoding: unicode
-  # database: db
-  # pool: 5
-  # username: rails
-  # password: 8pec2DFYRw
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
