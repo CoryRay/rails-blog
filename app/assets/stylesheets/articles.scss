@@ -5,22 +5,25 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #eeeeee;
+    max-width: 650px;
+    margin: 24px auto;
+    padding: 0 10px;
+
     color: #444;
+    background-color: #eeeeee;
+
     font-family: "Raleway", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
-    margin: 24px auto;
-    max-width: 650px;
     line-height: 1.6;
-    padding: 0 10px;
 }
 h1, h2, h3 {
     text-shadow: 1px 1px 2px #8C8C8C;
+
     line-height: 1.2;
 }
 table {
-    background-color: #f5f5f5;
     border-collapse: collapse;
+    background-color: #f5f5f5;
     box-shadow: 1px 1px 8px 0px #8C8C8C;
 }
 table>tbody>tr:hover {
@@ -30,8 +33,9 @@ table>tbody>tr:last-of-type {
     border-bottom: 1px solid #ddd;
 }
 table>thead>tr>th, table>tbody>tr>td {
-    text-align: left;
     padding: 12px;
+
+    text-align: left;
     vertical-align: middle;
 }
 table>thead>tr>th {
