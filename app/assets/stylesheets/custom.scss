@@ -35,18 +35,19 @@ th, td {
 .nav-links {
     list-style: none;
     display: inline-block;
+    margin: 0;
 }
 .nav-links>li {
     float: left;
-    padding: 1rem
+    padding: 1rem;
+    margin: 0;
 }
 
 .debug_dump {
-    width: 100%;
-    margin-top: 45px;
     padding: 15px;
 
     border: 1px solid #ddd;
     border-radius: 6px;
     background: #fff;
+    font-family: "Anonymous Pro", monospace;
 }

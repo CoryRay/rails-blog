@@ -4,12 +4,22 @@
         <!-- <div class="logo">
             <%= link_to 'Home', root_path %>
         </div> -->
-        <nav>
+        <nav class="u-pull-right">
             <ul class="nav-links">
                 <li><%= link_to 'Home', root_path %></li>
                 <li><%= link_to 'Resume', resume_path %></li>
                 <li><%= link_to 'Portfolio', portfolio_path %></li>
+                <li><%= link_to "Users", '#' %></li>
+                <li>||</li>
+                <% if logged_in? %>
+                <li><%= link_to "Profile", current_user %></li>
+                <li><%= link_to "Settings", '#' %></li>
+                <li>|</li>
+                <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+                <% else %>
                 <li><%= link_to 'Sign up', signup_path %></li>
+                <li><%= link_to 'Log in', login_path %></li>
+                <% end %>
             </ul>
         </nav>
     </div>
