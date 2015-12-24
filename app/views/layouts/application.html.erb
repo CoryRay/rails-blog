@@ -6,15 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= favicon_link_tag 'favicon.png' %>
+
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <style>
-    </style>
 </head>
 <body>
-    <%= yield %>
+    <%= render 'shared/nav' %>
+
+    <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+    <% end %>
+
+    <main class="container">
+        <%= yield %>
+    </main>
+
+    <% if Rails.env.development? %>
+    <div class="container">
+        <%= debug(params) %>
+    </div>
+    <% end %>
 </body>
 </html>

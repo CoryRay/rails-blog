@@ -1,27 +1,30 @@
 <% provide(:title, "Blog Articles ") %>
-<h1>Listing Articles</h1>
+<div class="twelve columns">
 
-<p><%= link_to 'New article', new_article_path %></p>
+    <h1>Listing Articles</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-      <th colspan="3">Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+    <p><%= link_to 'New article', new_article_path %></p>
+
+    <table class='u-full-width'>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Text</th>
+                <th colspan="3">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @articles.each do |article| %>
+            <tr>
+                <td><%= article.title %></td>
+                <td><%= article.text %></td>
+                <td><%= link_to 'Show', article_path(article) %></td>
+                <td><%= link_to 'Edit', edit_article_path(article) %></td>
+                <td><%= link_to 'Destroy', article_path(article),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
