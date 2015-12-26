@@ -1,28 +1,5 @@
 <% provide(:title, 'Sign Up') %>
+<% provide(:button_text, 'Create my account') %>
 <h1>Sign up</h1>
 
-<%= form_for(@user) do |f| %>
-<fieldset>
-    <legend>Profile Info</legend>
-    <%= render 'shared/error_messages' %>
-    <div>
-        <%= f.label :name %>
-        <%= f.text_field :name, required: true %>
-    </div>
-    <div>
-        <%= f.label :email %>
-        <%= f.email_field :email, required: true %>
-    </div>
-    <div>
-        <%= f.label :password %>
-        <%= f.password_field :password, required: true %>
-    </div>
-    <div>
-        <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation, required: true %>
-    </div>
-    <div>
-        <%= f.submit "Create my account" %>
-    </div>
-</fieldset>
-<% end %>
+<%= render 'form' %>

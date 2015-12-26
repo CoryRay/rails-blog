@@ -15,6 +15,9 @@ body {
     // font-family: "Raleway", "Helvetica Neue", Helvetica, sans-serif;
     // line-height: 1.6;
 }
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 1px 1px 2px #8C8C8C;
+}
 table {
     background-color: #f5f5f5;
     box-shadow: 1px 1px 8px 0px #8C8C8C;
@@ -43,11 +46,44 @@ th, td {
     margin: 0;
 }
 
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select,
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    transition: all 100ms ease-in-out;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
 .debug_dump {
     padding: 15px;
 
     border: 1px solid #ddd;
-    border-radius: 6px;
+    border-radius: 4px;
     background: #fff;
     font-family: "Anonymous Pro", monospace;
 }

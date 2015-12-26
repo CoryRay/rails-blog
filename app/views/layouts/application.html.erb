@@ -18,7 +18,9 @@
     <%= render 'shared/nav' %>
 
     <% flash.each do |message_type, message| %>
+    <div class="container">
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+    </div>
     <% end %>
 
     <main class="container">
