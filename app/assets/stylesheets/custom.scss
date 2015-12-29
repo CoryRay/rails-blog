@@ -60,7 +60,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-    transition: all 100ms ease-in-out;
+    transition: border 100ms ease-in-out;
 }
 
 .alert {

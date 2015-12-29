@@ -1,6 +1,26 @@
 <% provide(:title, "Cory Ray") %>
-<h1>Hello there</h1>
-<p><%= link_to 'My Blog', controller: 'articles' %></p>
-<p><%= link_to 'My Resume', resume_path %></p>
-<p><%= link_to 'My Portfolio', portfolio_path %></p>
-<p><%= link_to "Sign up now!", signup_path %></p>
+<% if logged_in? %>
+<div class="row">
+    <aside class="six columns">
+        <section class="user_info">
+            <%= render 'shared/user_info' %>
+        </section>
+        <section class="micropost_form">
+            <%= render 'shared/micropost_form' %>
+        </section>
+    </aside>
+    <section class='six columns'>
+        <h3>Micropost Feed</h3>
+        <%= render 'shared/feed' %>
+    </section>
+</div>
+<% else %>
+
+<div class="row">
+    <h1>Hello there</h1>
+    <p><%= link_to 'My Blog', controller: 'articles' %></p>
+    <p><%= link_to 'My Resume', resume_path %></p>
+    <p><%= link_to 'My Portfolio', portfolio_path %></p>
+    <p><%= link_to "Sign up now!", signup_path %></p>
+</div>
+<% end %>
